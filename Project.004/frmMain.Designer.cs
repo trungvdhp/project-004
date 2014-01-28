@@ -28,26 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.appMenu = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
+            this.appMenu = new DevExpress.XtraBars.Ribbon.ApplicationMenu();
             this.iExit = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonImageCollection = new DevExpress.Utils.ImageCollection(this.components);
+            this.ribbonImageCollection = new DevExpress.Utils.ImageCollection();
             this.iAbout = new DevExpress.XtraBars.BarButtonItem();
             this.siStatus = new DevExpress.XtraBars.BarStaticItem();
             this.siInfo = new DevExpress.XtraBars.BarStaticItem();
             this.rgbiSkins = new DevExpress.XtraBars.RibbonGalleryBarItem();
-            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonImageCollectionLarge = new DevExpress.Utils.ImageCollection(this.components);
+            this.ribbonImageCollectionLarge = new DevExpress.Utils.ImageCollection();
             this.homeRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.fileRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.formatRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.skinsRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.exitRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.helpRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.helpRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.skinsRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.appMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonImageCollection)).BeginInit();
@@ -161,12 +160,6 @@
             this.rgbiSkins.Id = 60;
             this.rgbiSkins.Name = "rgbiSkins";
             // 
-            // barButtonItem2
-            // 
-            this.barButtonItem2.Caption = "barButtonItem2";
-            this.barButtonItem2.Id = 64;
-            this.barButtonItem2.Name = "barButtonItem2";
-            // 
             // ribbonImageCollectionLarge
             // 
             this.ribbonImageCollectionLarge.ImageSize = new System.Drawing.Size(32, 32);
@@ -193,20 +186,24 @@
             // fileRibbonPageGroup
             // 
             this.fileRibbonPageGroup.Name = "fileRibbonPageGroup";
-            this.fileRibbonPageGroup.ShowCaptionButton = false;
             this.fileRibbonPageGroup.Text = "File";
             // 
             // formatRibbonPageGroup
             // 
             this.formatRibbonPageGroup.Name = "formatRibbonPageGroup";
-            this.formatRibbonPageGroup.ShowCaptionButton = false;
             this.formatRibbonPageGroup.Text = "Format";
+            // 
+            // skinsRibbonPageGroup
+            // 
+            this.skinsRibbonPageGroup.ItemLinks.Add(this.rgbiSkins);
+            this.skinsRibbonPageGroup.Name = "skinsRibbonPageGroup";
+            this.skinsRibbonPageGroup.ShowCaptionButton = false;
+            this.skinsRibbonPageGroup.Text = "Skins";
             // 
             // exitRibbonPageGroup
             // 
             this.exitRibbonPageGroup.ItemLinks.Add(this.iExit);
             this.exitRibbonPageGroup.Name = "exitRibbonPageGroup";
-            this.exitRibbonPageGroup.ShowCaptionButton = false;
             this.exitRibbonPageGroup.Text = "Exit";
             // 
             // helpRibbonPage
@@ -221,15 +218,7 @@
             // 
             this.helpRibbonPageGroup.ItemLinks.Add(this.iAbout);
             this.helpRibbonPageGroup.Name = "helpRibbonPageGroup";
-            this.helpRibbonPageGroup.ShowCaptionButton = false;
             this.helpRibbonPageGroup.Text = "Help";
-            // 
-            // skinsRibbonPageGroup
-            // 
-            this.skinsRibbonPageGroup.ItemLinks.Add(this.rgbiSkins);
-            this.skinsRibbonPageGroup.Name = "skinsRibbonPageGroup";
-            this.skinsRibbonPageGroup.ShowCaptionButton = false;
-            this.skinsRibbonPageGroup.Text = "Skins";
             // 
             // ribbonStatusBar
             // 
@@ -239,6 +228,12 @@
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbonControl;
             this.ribbonStatusBar.Size = new System.Drawing.Size(1100, 27);
+            // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Caption = "barButtonItem2";
+            this.barButtonItem2.Id = 64;
+            this.barButtonItem2.Name = "barButtonItem2";
             // 
             // frmMain
             // 
