@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="QLKHO">
+  <DataContextMoniker Name="/QLKHODataContext" />
+  <nestedChildShapes>
+    <classShape Id="1ed757f6-1ab8-4457-9bb2-046d2b72589f" absoluteBounds="4.5, 1, 2, 2.5401025390625">
+      <DataClassMoniker Name="/QLKHODataContext/SYS_NguoiDung" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eeaf4ea5-9d57-4fc0-87e6-1efa83a1c96a" absoluteBounds="4.515, 1.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Library
 {
-    public class Database
+    public abstract class IDatabase
     {
         public const string FORMATCONNECTTIONSTRING = "Data Source={0};Initial Catalog={1};User ID={2};Password={3}";
         public const string FORMATCONNECTTIONSTRING2 = "Data Source={0};Initial Catalog={1};User ID={2};Password={3};Connection Timeout={4}";

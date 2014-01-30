@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Library
 {
-    public static class Str
+    public static class IString
     {
         public static string GetLastString(this string path)
         {
