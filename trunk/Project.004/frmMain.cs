@@ -39,6 +39,7 @@ namespace Project._004
 
         private void frmMain_Load(object sender, EventArgs e)
         {
+            #region this.FormClosing += (sender1, e1)
             this.FormClosing += (sender1, e1) =>
                 {
                     var result = XtraMessageBox.Show("Bạn chắc chắn thoát chương trình ?", "Thoát chương trình", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -70,6 +71,18 @@ namespace Project._004
                         e1.Cancel = true;
                     }
                 };
+            #endregion
+
+            #region this.KeyDown += (sender2, e2)
+            this.KeyDown += (sender2, e2) =>
+                {
+                    if (e2.KeyCode == Keys.F4 && e2.Alt)
+                    {
+                        e2.Handled = true;
+                        this.Close();
+                    }
+                };
+            #endregion
 
             btnDangNhap.PerformClick();            
         }
@@ -82,7 +95,23 @@ namespace Project._004
 
             if (result == System.Windows.Forms.DialogResult.OK)
             {
+                btnDangNhap.Enabled = false;
+                btnDangXuat.Enabled = true;
+                btnThongTinTaiKhoan.Enabled = true;
 
+                if (Program.CurrentUser.ID_nhan_vien == null)
+                {
+                    siInfo.Caption = Program.CurrentUser.Ten_day_du;
+
+                    if (Program.CurrentUser.Tai_khoan == "sadmin")
+                    {
+                        rpgPhanQuyen.Visible = true;
+                    }
+                }
+                else
+                {
+                    //siInfo.Caption = String.Format("{0} : {1}", CAT_NhanVienCtrl.GetPhongBan(Program.CurrentUser.ID_nhan_vien.Value), Program.CurrentUser.Ten_day_du);
+                }
             }
             else
             {
@@ -106,6 +135,11 @@ namespace Project._004
                 Program.CurrentUser = null;
 
                 IForm.CloseAllTabPage(tabControl);
+                INotify.ShowInfo("Đăng xuất thành công khỏi hệ thống!", "Đăng xuất thành công");
+
+                btnDangNhap.Enabled = true;
+                btnDangXuat.Enabled = false;
+                btnThongTinTaiKhoan.Enabled = false;
 
                 btnDangNhap.PerformClick();
             }
@@ -113,6 +147,91 @@ namespace Project._004
             {
                 INotify.ShowError("Không thể đăng xuất khỏi hệ thống!", "Đăng xuất thất bại");
             }
+        }
+
+        private void btnThongTinTaiKhoan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btnQuanLyNguoiDung_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btnNhatKyHeThong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btnCauHinhHeThong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btnThoat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btnDanhSachDieuKhien_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btnLoaiDieuKhien_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btnPhanQuyen_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btnVaiTro_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btnPhanVaiTro_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btnKhoVatTu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btnNhomVatTu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btnLoaiVatTu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btnVatTu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btnNhanVien_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btnNhaCungCap_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btnKhachHang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
         }
     }
 }
