@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 using DevExpress.LookAndFeel;
+using Project._004.Models;
 
 namespace Project._004
 {
     static class Program
     {
+        public static string ConnectionString { get; set; }
+        public static SYS_NguoiDung CurrentUser { get; set; }
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

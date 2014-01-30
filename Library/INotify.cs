@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace Library
 {
-    public class Notify
+    public class INotify
     {
         public static class InforNotifyHelper
         {

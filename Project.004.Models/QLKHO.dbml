@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLKDONGLUC" Class="QLKHODataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=203.162.246.102;Initial Catalog=QLKDONGLUC;User ID=sa" SettingsObjectName="Project._004.Models.Properties.Settings" SettingsPropertyName="QLKDONGLUCConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.SYS_NguoiDung" Member="SYS_NguoiDungs">
+    <Type Name="SYS_NguoiDung">
+      <Column Name="ID_nguoi_dung" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Tai_khoan" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Mat_khau" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Ten_day_du" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_trang_thai" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_nhan_vien" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Lan_dang_nhap_cuoi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Thoi_gian_cho" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="May_tram" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

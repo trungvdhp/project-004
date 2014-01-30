@@ -17,7 +17,7 @@ namespace Library.UI
         /// <param name="state">FormWindowState</param>
         /// <param name="style">FormBorderStyle</param>
         /// <returns>DialogResult</returns>
-        public static DialogResult ShowDialogForm(XtraForm frm, FormWindowState state = FormWindowState.Normal, FormBorderStyle style = FormBorderStyle.None)
+        public static DialogResult ShowDialogForm(XtraForm frm, FormWindowState state = FormWindowState.Normal, FormBorderStyle style = FormBorderStyle.Sizable)
         {
             frm.WindowState = state;
             frm.FormBorderStyle = style;

@@ -7,7 +7,7 @@ using System.Security.Cryptography;
 namespace Library
 {
 
-    public class Security
+    public class ISecurity
     {
         /// <summary>
         /// Mã hóa SHA
