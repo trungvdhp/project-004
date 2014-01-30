@@ -1,15 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.XtraBars.Helpers;
-using DevExpress.Skins;
-using DevExpress.LookAndFeel;
-using DevExpress.UserSkins;
 using Library;
 using Library.UI;
 using Library.UI.Form;
@@ -17,6 +10,8 @@ using Library.UI.Form;
 
 namespace Project._004
 {
+    using Project._004.Controllers;
+
     public partial class frmMain : XtraForm
     {
         public frmMain()
@@ -44,7 +39,80 @@ namespace Project._004
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            IForm.ShowDialogForm(new Project._004.Systems.frmLogin(), FormWindowState.Normal, System.Windows.Forms.FormBorderStyle.None);
+            this.FormClosing += (sender1, e1) =>
+                {
+                    var result = XtraMessageBox.Show("Bạn chắc chắn thoát chương trình ?", "Thoát chương trình", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (result == System.Windows.Forms.DialogResult.Yes)
+                    {
+                        try
+                        {
+                            SYS_NguoiDungCtrl.LogOut();
+                        }
+                        catch (Exception)
+                        {
+                            //e1.Cancel = true;
+                        }
+                        finally
+                        {
+                            try
+                            {
+                                Environment.Exit(0);
+                            }
+                            catch
+                            {
+                                Application.ExitThread();
+                            }
+                        }
+                    }
+                    else
+                    {
+                        e1.Cancel = true;
+                    }
+                };
+
+            btnDangNhap.PerformClick();            
+        }
+
+        private void btnDangNhap_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            rpgDieuKhien.Visible = false;
+
+            var result = IForm.ShowDialogForm(new Project._004.Systems.frmLogin(), FormWindowState.Normal, System.Windows.Forms.FormBorderStyle.None);
+
+            if (result == System.Windows.Forms.DialogResult.OK)
+            {
+
+            }
+            else
+            {
+                try
+                {
+                    Environment.Exit(0);
+                }
+                catch (Exception)
+                {
+                    Application.ExitThread();
+                }
+            }
+        }
+
+        private void btnDangXuat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            try
+            {
+                SYS_NguoiDungCtrl.LogOut();
+
+                Program.CurrentUser = null;
+
+                IForm.CloseAllTabPage(tabControl);
+
+                btnDangNhap.PerformClick();
+            }
+            catch (Exception)
+            {
+                INotify.ShowError("Không thể đăng xuất khỏi hệ thống!", "Đăng xuất thất bại");
+            }
         }
     }
 }
