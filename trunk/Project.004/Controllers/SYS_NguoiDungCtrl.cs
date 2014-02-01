@@ -24,7 +24,7 @@ namespace Project._004.Controllers
 
                 if (!users.Any()) return USERSTATE.NOTEXIST; //Người dùng không tồn tại
 
-                var user = db.SYS_NguoiDungs.SingleOrDefault(w => w.Tai_khoan == Tai_khoan && w.Mat_khau == password);
+                var user = db.SYS_NguoiDungs.FirstOrDefault(w => w.Tai_khoan == Tai_khoan && w.Mat_khau == password);
 
                 if (user == null) return USERSTATE.WRONGPASSWORD; //Sai mật khẩu
 
@@ -32,7 +32,7 @@ namespace Project._004.Controllers
                 {
                     user.ID_trang_thai = 2;
                     user.Lan_dang_nhap_cuoi = DbHelper.GetDatabaseDate();
-                   // user.May_tram = MachineInfo.GetMachineInfo("");
+                    user.May_tram = MachineInfo.SystemInformation;
 
                     db.SubmitChanges();
                     Program.CurrentUser = user;
@@ -42,7 +42,7 @@ namespace Project._004.Controllers
                 else if (user.ID_trang_thai == 2)
                 {
                     user.Lan_dang_nhap_cuoi = DbHelper.GetDatabaseDate();
-                   // user.May_tram = MachineInfo.GetMachineInfo("");
+                    user.May_tram = MachineInfo.SystemInformation;
 
                     db.SubmitChanges();
                     Program.CurrentUser = user;

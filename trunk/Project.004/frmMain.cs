@@ -173,7 +173,10 @@ namespace Project._004
 
         private void btnCauHinhHeThong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            if (IForm.ShowDialogForm(new Project._004.Systems.frmConfig(), FormWindowState.Normal, System.Windows.Forms.FormBorderStyle.None) == System.Windows.Forms.DialogResult.OK)
+            {
+                btnDangXuat.PerformClick();
+            }
         }
 
         private void btnThoat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
