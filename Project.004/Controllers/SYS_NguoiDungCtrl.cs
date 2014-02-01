@@ -32,7 +32,7 @@ namespace Project._004.Controllers
                 {
                     user.ID_trang_thai = 2;
                     user.Lan_dang_nhap_cuoi = DbHelper.GetDatabaseDate();
-                    user.May_tram = MachineInfo.GetMachineInfo();
+                   // user.May_tram = MachineInfo.GetMachineInfo("");
 
                     db.SubmitChanges();
                     Program.CurrentUser = user;
@@ -42,7 +42,7 @@ namespace Project._004.Controllers
                 else if (user.ID_trang_thai == 2)
                 {
                     user.Lan_dang_nhap_cuoi = DbHelper.GetDatabaseDate();
-                    user.May_tram = MachineInfo.GetMachineInfo();
+                   // user.May_tram = MachineInfo.GetMachineInfo("");
 
                     db.SubmitChanges();
                     Program.CurrentUser = user;
