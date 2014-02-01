@@ -164,7 +164,7 @@
             this.ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.MacOffice;
             this.ribbonControl.ShowExpandCollapseButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonControl.ShowToolbarCustomizeItem = false;
-            this.ribbonControl.Size = new System.Drawing.Size(1100, 104);
+            this.ribbonControl.Size = new System.Drawing.Size(860, 104);
             this.ribbonControl.StatusBar = this.ribbonStatusBar;
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
@@ -507,10 +507,10 @@
             // 
             // rpgQuanLyNguoiDung
             // 
-            this.rpgQuanLyNguoiDung.ItemLinks.Add(this.btnQuanLyNguoiDung);
             this.rpgQuanLyNguoiDung.ItemLinks.Add(this.btnDangNhap);
             this.rpgQuanLyNguoiDung.ItemLinks.Add(this.btnDangXuat);
             this.rpgQuanLyNguoiDung.ItemLinks.Add(this.btnThongTinTaiKhoan);
+            this.rpgQuanLyNguoiDung.ItemLinks.Add(this.btnThoat);
             this.rpgQuanLyNguoiDung.Name = "rpgQuanLyNguoiDung";
             this.rpgQuanLyNguoiDung.ShowCaptionButton = false;
             this.rpgQuanLyNguoiDung.Text = "Quản lý người dùng";
@@ -535,7 +535,6 @@
             // 
             this.rpgHeThong.ItemLinks.Add(this.btnNhatKyHeThong);
             this.rpgHeThong.ItemLinks.Add(this.btnCauHinhHeThong);
-            this.rpgHeThong.ItemLinks.Add(this.btnThoat);
             this.rpgHeThong.Name = "rpgHeThong";
             this.rpgHeThong.ShowCaptionButton = false;
             this.rpgHeThong.Text = "Hệ thống";
@@ -641,7 +640,7 @@
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 250);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbonControl;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1100, 27);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(860, 27);
             // 
             // tabControl
             // 
@@ -653,14 +652,14 @@
             this.tabControl.HeaderOrientation = DevExpress.XtraTab.TabOrientation.Vertical;
             this.tabControl.Location = new System.Drawing.Point(0, 104);
             this.tabControl.Name = "tabControl";
-            this.tabControl.Size = new System.Drawing.Size(1100, 146);
+            this.tabControl.Size = new System.Drawing.Size(860, 146);
             this.tabControl.TabIndex = 2;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1100, 277);
+            this.ClientSize = new System.Drawing.Size(860, 277);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.ribbonControl);
             this.Controls.Add(this.ribbonStatusBar);

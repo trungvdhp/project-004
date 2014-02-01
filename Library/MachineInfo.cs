@@ -14,12 +14,6 @@ namespace Library
         {
             var result = new Dictionary<string, object>();
 
-            //var OSInfo = OperatingSystem.;
-
-            ////result.Add("OSVersion", string.Format("{0} {1}", Environment.OSVersion, (Environment.Is64BitOperatingSystem ? "x64" : "x86")));
-
-            //result.Add("OSVersion", string.Format("{0} {1} {2} {3}", OSInfo.Platform, (Environment.Is64BitOperatingSystem ? "x64" : "x86")));
-            
             result.Add("UserDomainName", string.Format("{0}", Environment.UserDomainName));
             result.Add("UserName", string.Format("{0}", Environment.UserName));
             
@@ -40,6 +34,27 @@ namespace Library
             }
 
             return result;
+        }
+
+        public static string PhysicalAddress
+        {
+            get
+            {
+                foreach (NetworkInterface networkInterface in NetworkInterface.GetAllNetworkInterfaces())
+                {
+                    if (networkInterface.OperationalStatus == OperationalStatus.Up)
+                    {
+                        foreach (var ip in networkInterface.GetIPProperties().UnicastAddresses)
+                        {
+                            if (ip.Address.AddressFamily == AddressFamily.InterNetwork)
+                            {
+                                return networkInterface.GetPhysicalAddress().ToString();
+                            }
+                        }
+                    }
+                }
+                return string.Empty;
+            }
         }
 
         public static string Caption
@@ -70,11 +85,19 @@ namespace Library
                 return GetSystemInfo("RegisteredUser");
             }
         }
-        public static string VSerialNumber
+        public static string SerialNumber
         {
             get
             {
-                return GetSystemInfo("VSerialNumber");
+                return GetSystemInfo("SerialNumber");
+            }
+        }
+
+        public static string SystemInformation
+        {
+            get
+            {
+                return string.Format("{0}|{1}|{2}|{3} {4}|{5}", CSName, PhysicalAddress, RegisteredUser, Caption, OSArchitecture, SerialNumber);
             }
         }
 
