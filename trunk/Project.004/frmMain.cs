@@ -101,7 +101,7 @@ namespace Project._004
 
                 if (Program.CurrentUser.ID_nhan_vien == null)
                 {
-                    siInfo.Caption = Program.CurrentUser.Ten_day_du;
+                    siCountDown.Caption = Program.CurrentUser.Ten_day_du;
 
                     if (Program.CurrentUser.Tai_khoan == "sadmin")
                     {
@@ -112,6 +112,13 @@ namespace Project._004
                 {
                     //siInfo.Caption = String.Format("{0} : {1}", CAT_NhanVienCtrl.GetPhongBan(Program.CurrentUser.ID_nhan_vien.Value), Program.CurrentUser.Ten_day_du);
                 }
+
+                /* --------- Thông tin --------- */
+                siUser.Caption = "Tài khoản: " + Program.CurrentUser.Tai_khoan;
+                siClient.Caption = String.Format("Máy khách: {0} - {1}", MachineInfo.CSName, MachineInfo.RegisteredUser);
+                siVersion.Caption = "Phiên bản: " + Application.ProductVersion;
+
+                //siCountDown.Caption = String.Format("Thời gian: {0:HH:mm:ss}", new TimeSpan(0, 0, 5));
             }
             else
             {

@@ -35,7 +35,7 @@
             this.btnThoat = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonImageCollection = new DevExpress.Utils.ImageCollection(this.components);
             this.btnThongTin = new DevExpress.XtraBars.BarButtonItem();
-            this.siInfo = new DevExpress.XtraBars.BarStaticItem();
+            this.siCountDown = new DevExpress.XtraBars.BarStaticItem();
             this.rgbiSkins = new DevExpress.XtraBars.RibbonGalleryBarItem();
             this.btnQuanLyNguoiDung = new DevExpress.XtraBars.BarButtonItem();
             this.btnDangNhap = new DevExpress.XtraBars.BarButtonItem();
@@ -71,9 +71,9 @@
             this.barButtonItem12 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem13 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem14 = new DevExpress.XtraBars.BarButtonItem();
-            this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
-            this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
-            this.barStaticItem4 = new DevExpress.XtraBars.BarStaticItem();
+            this.siUser = new DevExpress.XtraBars.BarStaticItem();
+            this.siClient = new DevExpress.XtraBars.BarStaticItem();
+            this.siVersion = new DevExpress.XtraBars.BarStaticItem();
             this.ribbonImageCollectionLarge = new DevExpress.Utils.ImageCollection(this.components);
             this.HeThongRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgQuanLyNguoiDung = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -110,7 +110,7 @@
             this.ribbonControl.ExpandCollapseItem,
             this.btnThoat,
             this.btnThongTin,
-            this.siInfo,
+            this.siCountDown,
             this.rgbiSkins,
             this.btnQuanLyNguoiDung,
             this.btnDangNhap,
@@ -146,15 +146,15 @@
             this.barButtonItem12,
             this.barButtonItem13,
             this.barButtonItem14,
-            this.barStaticItem1,
-            this.barStaticItem2,
-            this.barStaticItem4});
+            this.siUser,
+            this.siClient,
+            this.siVersion});
             this.ribbonControl.LargeImages = this.ribbonImageCollectionLarge;
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl.MaxItemId = 103;
             this.ribbonControl.Name = "ribbonControl";
-            this.ribbonControl.PageHeaderItemLinks.Add(this.barStaticItem1);
-            this.ribbonControl.PageHeaderItemLinks.Add(this.barStaticItem2);
+            this.ribbonControl.PageHeaderItemLinks.Add(this.siUser);
+            this.ribbonControl.PageHeaderItemLinks.Add(this.siClient);
             this.ribbonControl.PageHeaderItemLinks.Add(this.btnThongTin);
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.HeThongRibbonPage,
@@ -205,14 +205,15 @@
             this.btnThongTin.ImageIndex = 0;
             this.btnThongTin.LargeImageIndex = 0;
             this.btnThongTin.Name = "btnThongTin";
+            this.btnThongTin.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
-            // siInfo
+            // siCountDown
             // 
-            this.siInfo.Caption = "Thời gian: 01/01/2014 ";
-            this.siInfo.Id = 32;
-            this.siInfo.ImageIndex = 4;
-            this.siInfo.Name = "siInfo";
-            this.siInfo.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.siCountDown.Caption = "Thời gian: 04: 00: 00";
+            this.siCountDown.Id = 32;
+            this.siCountDown.ImageIndex = 4;
+            this.siCountDown.Name = "siCountDown";
+            this.siCountDown.TextAlignment = System.Drawing.StringAlignment.Near;
             // 
             // rgbiSkins
             // 
@@ -459,30 +460,30 @@
             this.barButtonItem14.Id = 98;
             this.barButtonItem14.Name = "barButtonItem14";
             // 
-            // barStaticItem1
+            // siUser
             // 
-            this.barStaticItem1.Caption = "Administrator";
-            this.barStaticItem1.Id = 99;
-            this.barStaticItem1.ImageIndex = 1;
-            this.barStaticItem1.Name = "barStaticItem1";
-            this.barStaticItem1.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.siUser.Caption = "Administrator";
+            this.siUser.Id = 99;
+            this.siUser.ImageIndex = 1;
+            this.siUser.Name = "siUser";
+            this.siUser.TextAlignment = System.Drawing.StringAlignment.Near;
             // 
-            // barStaticItem2
+            // siClient
             // 
-            this.barStaticItem2.Caption = "Computer Client";
-            this.barStaticItem2.Id = 100;
-            this.barStaticItem2.ImageIndex = 2;
-            this.barStaticItem2.Name = "barStaticItem2";
-            this.barStaticItem2.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.siClient.Caption = "Computer Client";
+            this.siClient.Id = 100;
+            this.siClient.ImageIndex = 2;
+            this.siClient.Name = "siClient";
+            this.siClient.TextAlignment = System.Drawing.StringAlignment.Near;
             // 
-            // barStaticItem4
+            // siVersion
             // 
-            this.barStaticItem4.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
-            this.barStaticItem4.Caption = "Phiên bản: 1.0.0.1 Standard";
-            this.barStaticItem4.Id = 102;
-            this.barStaticItem4.ImageIndex = 3;
-            this.barStaticItem4.Name = "barStaticItem4";
-            this.barStaticItem4.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.siVersion.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.siVersion.Caption = "Phiên bản: 1.0.0.1 Standard";
+            this.siVersion.Id = 102;
+            this.siVersion.ImageIndex = 3;
+            this.siVersion.Name = "siVersion";
+            this.siVersion.TextAlignment = System.Drawing.StringAlignment.Near;
             // 
             // ribbonImageCollectionLarge
             // 
@@ -635,8 +636,8 @@
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.ItemLinks.Add(this.siInfo);
-            this.ribbonStatusBar.ItemLinks.Add(this.barStaticItem4);
+            this.ribbonStatusBar.ItemLinks.Add(this.siCountDown);
+            this.ribbonStatusBar.ItemLinks.Add(this.siVersion);
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 250);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbonControl;
@@ -682,7 +683,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl;
         private DevExpress.XtraBars.BarButtonItem btnThoat;
         private DevExpress.XtraBars.BarButtonItem btnThongTin;
-        private DevExpress.XtraBars.BarStaticItem siInfo;
+        private DevExpress.XtraBars.BarStaticItem siCountDown;
         private DevExpress.XtraBars.RibbonGalleryBarItem rgbiSkins;
         private DevExpress.XtraBars.Ribbon.RibbonPage HeThongRibbonPage;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgQuanLyNguoiDung;
@@ -739,9 +740,9 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem12;
         private DevExpress.XtraBars.BarButtonItem barButtonItem13;
         private DevExpress.XtraBars.BarButtonItem barButtonItem14;
-        private DevExpress.XtraBars.BarStaticItem barStaticItem1;
-        private DevExpress.XtraBars.BarStaticItem barStaticItem2;
-        private DevExpress.XtraBars.BarStaticItem barStaticItem4;
+        private DevExpress.XtraBars.BarStaticItem siUser;
+        private DevExpress.XtraBars.BarStaticItem siClient;
+        private DevExpress.XtraBars.BarStaticItem siVersion;
 
     }
 }
