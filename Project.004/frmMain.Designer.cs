@@ -164,7 +164,7 @@
             this.ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.MacOffice;
             this.ribbonControl.ShowExpandCollapseButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonControl.ShowToolbarCustomizeItem = false;
-            this.ribbonControl.Size = new System.Drawing.Size(860, 104);
+            this.ribbonControl.Size = new System.Drawing.Size(1018, 104);
             this.ribbonControl.StatusBar = this.ribbonStatusBar;
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
@@ -183,7 +183,7 @@
             this.btnThoat.Hint = "Closes this program after prompting you to save unsaved data";
             this.btnThoat.Id = 20;
             this.btnThoat.ImageIndex = 6;
-            this.btnThoat.LargeImageIndex = 6;
+            this.btnThoat.LargeImageIndex = 10;
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThoat_ItemClick);
             // 
@@ -270,6 +270,7 @@
             // 
             this.btnCauHinhHeThong.Caption = "Cấu hình hệ thống";
             this.btnCauHinhHeThong.Id = 69;
+            this.btnCauHinhHeThong.LargeImageIndex = 11;
             this.btnCauHinhHeThong.Name = "btnCauHinhHeThong";
             this.btnCauHinhHeThong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCauHinhHeThong_ItemClick);
             // 
@@ -277,6 +278,7 @@
             // 
             this.btnNhatKyHeThong.Caption = "Nhật ký hệ thống";
             this.btnNhatKyHeThong.Id = 70;
+            this.btnNhatKyHeThong.LargeImageIndex = 12;
             this.btnNhatKyHeThong.Name = "btnNhatKyHeThong";
             this.btnNhatKyHeThong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNhatKyHeThong_ItemClick);
             // 
@@ -284,6 +286,7 @@
             // 
             this.btnVaiTro.Caption = "Vai trò";
             this.btnVaiTro.Id = 71;
+            this.btnVaiTro.LargeImageIndex = 9;
             this.btnVaiTro.Name = "btnVaiTro";
             this.btnVaiTro.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnVaiTro_ItemClick);
             // 
@@ -291,6 +294,7 @@
             // 
             this.btnPhanVaiTro.Caption = "Phân vai trò";
             this.btnPhanVaiTro.Id = 72;
+            this.btnPhanVaiTro.LargeImageIndex = 8;
             this.btnPhanVaiTro.Name = "btnPhanVaiTro";
             this.btnPhanVaiTro.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPhanVaiTro_ItemClick);
             // 
@@ -298,6 +302,7 @@
             // 
             this.btnDanhSachDieuKhien.Caption = "Danh sách điều khiển";
             this.btnDanhSachDieuKhien.Id = 73;
+            this.btnDanhSachDieuKhien.LargeImageIndex = 5;
             this.btnDanhSachDieuKhien.Name = "btnDanhSachDieuKhien";
             this.btnDanhSachDieuKhien.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDanhSachDieuKhien_ItemClick);
             // 
@@ -305,6 +310,7 @@
             // 
             this.btnLoaiDieuKhien.Caption = "Loại điều khiển";
             this.btnLoaiDieuKhien.Id = 74;
+            this.btnLoaiDieuKhien.LargeImageIndex = 6;
             this.btnLoaiDieuKhien.Name = "btnLoaiDieuKhien";
             this.btnLoaiDieuKhien.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLoaiDieuKhien_ItemClick);
             // 
@@ -312,6 +318,7 @@
             // 
             this.btnPhanQuyen.Caption = "Phân quyền";
             this.btnPhanQuyen.Id = 75;
+            this.btnPhanQuyen.LargeImageIndex = 7;
             this.btnPhanQuyen.Name = "btnPhanQuyen";
             this.btnPhanQuyen.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPhanQuyen_ItemClick);
             // 
@@ -319,11 +326,12 @@
             // 
             this.btnCapNhat.Caption = "Cập nhật phần mềm";
             this.btnCapNhat.Id = 76;
+            this.btnCapNhat.LargeImageIndex = 13;
             this.btnCapNhat.Name = "btnCapNhat";
             // 
             // btnNhanVien
             // 
-            this.btnNhanVien.Caption = "Nhân viên";
+            this.btnNhanVien.Caption = "Quản lý nhân viên";
             this.btnNhanVien.Id = 77;
             this.btnNhanVien.Name = "btnNhanVien";
             this.btnNhanVien.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNhanVien_ItemClick);
@@ -494,6 +502,15 @@
             this.ribbonImageCollectionLarge.Images.SetKeyName(2, "System.Logout.32.png");
             this.ribbonImageCollectionLarge.Images.SetKeyName(3, "System.Profile.32.png");
             this.ribbonImageCollectionLarge.Images.SetKeyName(4, "System.UserManagement.32.png");
+            this.ribbonImageCollectionLarge.Images.SetKeyName(5, "System.Controls.32.png");
+            this.ribbonImageCollectionLarge.Images.SetKeyName(6, "System.Properties.32.png");
+            this.ribbonImageCollectionLarge.Images.SetKeyName(7, "System.PropertiesManagement.32.png");
+            this.ribbonImageCollectionLarge.Images.SetKeyName(8, "System.Role.32.png");
+            this.ribbonImageCollectionLarge.Images.SetKeyName(9, "System.RoleManagement.32.png");
+            this.ribbonImageCollectionLarge.Images.SetKeyName(10, "System.TurnOff.32.png");
+            this.ribbonImageCollectionLarge.Images.SetKeyName(11, "System.Config.32.png");
+            this.ribbonImageCollectionLarge.Images.SetKeyName(12, "System.Dairy.32.png");
+            this.ribbonImageCollectionLarge.Images.SetKeyName(13, "System.CloudRefresh.32.png");
             // 
             // HeThongRibbonPage
             // 
@@ -550,6 +567,7 @@
             // 
             // ribbonPageGroup1
             // 
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnQuanLyNguoiDung);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnNhanVien);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.ShowCaptionButton = false;
@@ -640,7 +658,7 @@
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 250);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbonControl;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(860, 27);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1018, 27);
             // 
             // tabControl
             // 
@@ -652,14 +670,14 @@
             this.tabControl.HeaderOrientation = DevExpress.XtraTab.TabOrientation.Vertical;
             this.tabControl.Location = new System.Drawing.Point(0, 104);
             this.tabControl.Name = "tabControl";
-            this.tabControl.Size = new System.Drawing.Size(860, 146);
+            this.tabControl.Size = new System.Drawing.Size(1018, 146);
             this.tabControl.TabIndex = 2;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(860, 277);
+            this.ClientSize = new System.Drawing.Size(1018, 277);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.ribbonControl);
             this.Controls.Add(this.ribbonStatusBar);

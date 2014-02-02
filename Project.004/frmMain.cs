@@ -99,26 +99,20 @@ namespace Project._004
                 btnDangXuat.Enabled = true;
                 btnThongTinTaiKhoan.Enabled = true;
 
-                if (Program.CurrentUser.ID_nhan_vien == null)
+                if (Program.CurrentUser.Tai_khoan == "sadmin")
                 {
-                    siCountDown.Caption = Program.CurrentUser.Ten_day_du;
-
-                    if (Program.CurrentUser.Tai_khoan == "sadmin")
-                    {
-                        rpgPhanQuyen.Visible = true;
-                    }
+                    rpgDieuKhien.Visible = true;
+                    siCountDown.Caption = string.Empty;
                 }
                 else
                 {
-                    //siInfo.Caption = String.Format("{0} : {1}", CAT_NhanVienCtrl.GetPhongBan(Program.CurrentUser.ID_nhan_vien.Value), Program.CurrentUser.Ten_day_du);
+                    siCountDown.Caption = String.Format("Thời gian: {0:HH:mm:ss}", (new TimeSpan(0, 0, 5)).ToString());
                 }
 
                 /* --------- Thông tin --------- */
                 siUser.Caption = "Tài khoản: " + Program.CurrentUser.Tai_khoan;
                 siClient.Caption = String.Format("Máy khách: {0} - {1}", MachineInfo.CSName, MachineInfo.RegisteredUser);
                 siVersion.Caption = "Phiên bản: " + Application.ProductVersion;
-
-                //siCountDown.Caption = String.Format("Thời gian: {0:HH:mm:ss}", new TimeSpan(0, 0, 5));
             }
             else
             {
@@ -157,11 +151,6 @@ namespace Project._004
         }
 
         private void btnThongTinTaiKhoan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-
-        }
-
-        private void btnQuanLyNguoiDung_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
 
         }
@@ -225,6 +214,11 @@ namespace Project._004
         }
 
         private void btnVatTu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btnQuanLyNguoiDung_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
 
         }

@@ -10,32 +10,6 @@ namespace Library
 {
     public class MachineInfo
     {
-        public static Dictionary<string, object> GetMachineInfo()
-        {
-            var result = new Dictionary<string, object>();
-
-            result.Add("UserDomainName", string.Format("{0}", Environment.UserDomainName));
-            result.Add("UserName", string.Format("{0}", Environment.UserName));
-            
-            foreach (NetworkInterface networkInterface in NetworkInterface.GetAllNetworkInterfaces())
-            {
-                if (networkInterface.OperationalStatus == OperationalStatus.Up)
-                {
-                    foreach (var ip in networkInterface.GetIPProperties().UnicastAddresses)
-                    {
-                        if (ip.Address.AddressFamily == AddressFamily.InterNetwork)
-                        {
-                            result.Add("PhysicalAddress", string.Format("{0}", networkInterface.GetPhysicalAddress()));
-
-                            return result;
-                        }
-                    }
-                }
-            }
-
-            return result;
-        }
-
         public static string PhysicalAddress
         {
             get
