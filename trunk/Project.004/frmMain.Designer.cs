@@ -198,14 +198,14 @@
             // 
             // btnThongTin
             // 
-            this.btnThongTin.Caption = "Thông tin";
+            this.btnThongTin.Caption = "Thông tin phần mềm";
             this.btnThongTin.Description = "Displays general program information.";
             this.btnThongTin.Hint = "Displays general program information";
             this.btnThongTin.Id = 24;
             this.btnThongTin.ImageIndex = 0;
             this.btnThongTin.LargeImageIndex = 0;
             this.btnThongTin.Name = "btnThongTin";
-            this.btnThongTin.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            this.btnThongTin.Visibility = DevExpress.XtraBars.BarItemVisibility.OnlyInRuntime;
             // 
             // siCountDown
             // 
@@ -333,6 +333,7 @@
             // 
             this.btnNhanVien.Caption = "Quản lý nhân viên";
             this.btnNhanVien.Id = 77;
+            this.btnNhanVien.LargeImageIndex = 16;
             this.btnNhanVien.Name = "btnNhanVien";
             this.btnNhanVien.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNhanVien_ItemClick);
             // 
@@ -340,6 +341,7 @@
             // 
             this.btnKhoVatTu.Caption = "Kho vật tư";
             this.btnKhoVatTu.Id = 78;
+            this.btnKhoVatTu.LargeImageIndex = 20;
             this.btnKhoVatTu.Name = "btnKhoVatTu";
             this.btnKhoVatTu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnKhoVatTu_ItemClick);
             // 
@@ -347,6 +349,7 @@
             // 
             this.btnNhomVatTu.Caption = "Nhóm vật tư";
             this.btnNhomVatTu.Id = 79;
+            this.btnNhomVatTu.LargeImageIndex = 14;
             this.btnNhomVatTu.Name = "btnNhomVatTu";
             this.btnNhomVatTu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNhomVatTu_ItemClick);
             // 
@@ -354,6 +357,7 @@
             // 
             this.btnLoaiVatTu.Caption = "Loại vật tư";
             this.btnLoaiVatTu.Id = 80;
+            this.btnLoaiVatTu.LargeImageIndex = 15;
             this.btnLoaiVatTu.Name = "btnLoaiVatTu";
             this.btnLoaiVatTu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLoaiVatTu_ItemClick);
             // 
@@ -361,6 +365,7 @@
             // 
             this.btnVatTu.Caption = "Vật tư";
             this.btnVatTu.Id = 81;
+            this.btnVatTu.LargeImageIndex = 19;
             this.btnVatTu.Name = "btnVatTu";
             this.btnVatTu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnVatTu_ItemClick);
             // 
@@ -368,6 +373,7 @@
             // 
             this.btnNhaCungCap.Caption = "Nhà cung cấp";
             this.btnNhaCungCap.Id = 82;
+            this.btnNhaCungCap.LargeImageIndex = 18;
             this.btnNhaCungCap.Name = "btnNhaCungCap";
             this.btnNhaCungCap.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNhaCungCap_ItemClick);
             // 
@@ -511,6 +517,13 @@
             this.ribbonImageCollectionLarge.Images.SetKeyName(11, "System.Config.32.png");
             this.ribbonImageCollectionLarge.Images.SetKeyName(12, "System.Dairy.32.png");
             this.ribbonImageCollectionLarge.Images.SetKeyName(13, "System.CloudRefresh.32.png");
+            this.ribbonImageCollectionLarge.Images.SetKeyName(14, "System.Group.32.png");
+            this.ribbonImageCollectionLarge.Images.SetKeyName(15, "System.Kind.32.png");
+            this.ribbonImageCollectionLarge.Images.SetKeyName(16, "System.Personal.32.png");
+            this.ribbonImageCollectionLarge.Images.SetKeyName(17, "System.Product.32.png");
+            this.ribbonImageCollectionLarge.Images.SetKeyName(18, "System.Provider.32.png");
+            this.ribbonImageCollectionLarge.Images.SetKeyName(19, "System.Ware.32.png");
+            this.ribbonImageCollectionLarge.Images.SetKeyName(20, "System.Warehouse.32.png");
             // 
             // HeThongRibbonPage
             // 
