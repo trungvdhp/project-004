@@ -45,5 +45,21 @@ namespace Project._004.Views.DanhMuc
                 ledNhanVien.Enabled = true;
             }
         }
+
+        private void ledNhanVien_EditValueChanged(object sender, EventArgs e)
+        {
+            txtTenDayDu.Enabled = ledNhanVien.EditValue == null ? false : true;
+
+            if (ledNhanVien.EditValue == null)
+            {
+                txtTenDayDu.Text = string.Empty;
+                txtTenDayDu.SetFocus();
+            }
+            else
+            {
+                var nv = CAT_NhanVienCtrl.GetItem((int)ledNhanVien.EditValue);
+                txtTenDayDu.Text = string.Format("{0} {1}", nv.Ho_dem, nv.Ten);
+            }
+        }
     }
 }

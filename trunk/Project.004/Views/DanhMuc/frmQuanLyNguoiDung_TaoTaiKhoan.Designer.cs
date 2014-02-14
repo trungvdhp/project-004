@@ -175,6 +175,7 @@
             this.ledNhanVien.Properties.NullText = "";
             this.ledNhanVien.Size = new System.Drawing.Size(254, 20);
             this.ledNhanVien.TabIndex = 2;
+            this.ledNhanVien.EditValueChanged += new System.EventHandler(this.ledNhanVien_EditValueChanged);
             // 
             // txtMatKhau
             // 
