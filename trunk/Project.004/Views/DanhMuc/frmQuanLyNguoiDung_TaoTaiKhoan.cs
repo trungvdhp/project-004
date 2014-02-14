@@ -28,7 +28,9 @@ namespace Project._004.Views.DanhMuc
         private void frmQuanLyNguoiDung_TaoTaiKhoan_Load(object sender, EventArgs e)
         {
             SYS_VaiTroCtrl.LoadDataSource(ledVaiTro);
+            CAT_NhanVienCtrl.LoadDataSource(ledNhanVien);
             //-------------------------------------------------------------
+            ledNhanVien.EditValue = null;
             txtTenDangNhap.SetFocus();
 
         }
@@ -43,6 +45,7 @@ namespace Project._004.Views.DanhMuc
             else
             {
                 ledNhanVien.Enabled = true;
+                ledNhanVien.ItemIndex = 0;
             }
         }
 
@@ -52,11 +55,13 @@ namespace Project._004.Views.DanhMuc
 
             if (ledNhanVien.EditValue == null)
             {
+                txtTenDayDu.Enabled = true;
                 txtTenDayDu.Text = string.Empty;
                 txtTenDayDu.SetFocus();
             }
             else
             {
+                txtTenDayDu.Enabled = false;
                 var nv = CAT_NhanVienCtrl.GetItem((int)ledNhanVien.EditValue);
                 txtTenDayDu.Text = string.Format("{0} {1}", nv.Ho_dem, nv.Ten);
             }
