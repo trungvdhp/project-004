@@ -30,6 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
+            this.btnMoTaiKhoan = new DevExpress.XtraEditors.SimpleButton();
+            this.btnKhoa = new DevExpress.XtraEditors.SimpleButton();
+            this.btnThem = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSua = new DevExpress.XtraEditors.SimpleButton();
             this.gridControl = new DevExpress.XtraGrid.GridControl();
             this.sYSNguoiDungBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -43,11 +48,6 @@
             this.colID_trang_thai = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTrang_thai = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
-            this.btnThem = new DevExpress.XtraEditors.SimpleButton();
-            this.btnMoTaiKhoan = new DevExpress.XtraEditors.SimpleButton();
-            this.btnKhoa = new DevExpress.XtraEditors.SimpleButton();
-            this.btnSua = new DevExpress.XtraEditors.SimpleButton();
-            this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
@@ -69,6 +69,56 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(804, 46);
             this.panelControl1.TabIndex = 0;
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnThoat.Location = new System.Drawing.Point(707, 12);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(85, 25);
+            this.btnThoat.TabIndex = 13;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
+            // btnMoTaiKhoan
+            // 
+            this.btnMoTaiKhoan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMoTaiKhoan.Location = new System.Drawing.Point(525, 12);
+            this.btnMoTaiKhoan.Name = "btnMoTaiKhoan";
+            this.btnMoTaiKhoan.Size = new System.Drawing.Size(85, 25);
+            this.btnMoTaiKhoan.TabIndex = 10;
+            this.btnMoTaiKhoan.Text = "Mở tài khoản";
+            this.btnMoTaiKhoan.Click += new System.EventHandler(this.btnMoTaiKhoan_Click);
+            // 
+            // btnKhoa
+            // 
+            this.btnKhoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnKhoa.Location = new System.Drawing.Point(616, 12);
+            this.btnKhoa.Name = "btnKhoa";
+            this.btnKhoa.Size = new System.Drawing.Size(85, 25);
+            this.btnKhoa.TabIndex = 11;
+            this.btnKhoa.Text = "Khóa tài khoản";
+            this.btnKhoa.Click += new System.EventHandler(this.btnKhoa_Click);
+            // 
+            // btnThem
+            // 
+            this.btnThem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnThem.Location = new System.Drawing.Point(343, 12);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(85, 25);
+            this.btnThem.TabIndex = 9;
+            this.btnThem.Text = "Tạo tài khoản";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSua.Location = new System.Drawing.Point(434, 12);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(85, 25);
+            this.btnSua.TabIndex = 12;
+            this.btnSua.Text = "Sửa tài khoản";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // gridControl
             // 
@@ -181,51 +231,6 @@
             this.repositoryItemTextEdit1.MaxLength = 8;
             this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
             this.repositoryItemTextEdit1.PasswordChar = '*';
-            // 
-            // btnThem
-            // 
-            this.btnThem.Location = new System.Drawing.Point(343, 12);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(85, 25);
-            this.btnThem.TabIndex = 9;
-            this.btnThem.Text = "Tạo tài khoản";
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
-            // btnMoTaiKhoan
-            // 
-            this.btnMoTaiKhoan.Location = new System.Drawing.Point(525, 12);
-            this.btnMoTaiKhoan.Name = "btnMoTaiKhoan";
-            this.btnMoTaiKhoan.Size = new System.Drawing.Size(85, 25);
-            this.btnMoTaiKhoan.TabIndex = 10;
-            this.btnMoTaiKhoan.Text = "Mở tài khoản";
-            this.btnMoTaiKhoan.Click += new System.EventHandler(this.btnMoTaiKhoan_Click);
-            // 
-            // btnKhoa
-            // 
-            this.btnKhoa.Location = new System.Drawing.Point(616, 12);
-            this.btnKhoa.Name = "btnKhoa";
-            this.btnKhoa.Size = new System.Drawing.Size(85, 25);
-            this.btnKhoa.TabIndex = 11;
-            this.btnKhoa.Text = "Khóa tài khoản";
-            this.btnKhoa.Click += new System.EventHandler(this.btnKhoa_Click);
-            // 
-            // btnSua
-            // 
-            this.btnSua.Location = new System.Drawing.Point(434, 12);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(85, 25);
-            this.btnSua.TabIndex = 12;
-            this.btnSua.Text = "Sửa tài khoản";
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
-            // btnThoat
-            // 
-            this.btnThoat.Location = new System.Drawing.Point(707, 12);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(85, 25);
-            this.btnThoat.TabIndex = 13;
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // frmQuanLyNguoiDung
             // 
