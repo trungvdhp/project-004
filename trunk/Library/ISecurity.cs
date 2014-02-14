@@ -90,5 +90,12 @@ namespace Library
             
             return utf8.GetString(results);
         }
+
+        public static string HashData(HashAlgorithm algo, string data)
+        {
+            byte[] rawData = System.Text.ASCIIEncoding.ASCII.GetBytes(data);
+            byte[] result = algo.ComputeHash(rawData);
+            return System.Convert.ToBase64String(result, 0, result.Length);
+        }
     }
 }

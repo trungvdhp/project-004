@@ -106,7 +106,7 @@ namespace Library
 
         public static DialogResult ShowDeleteConfirm()
         {
-            return XtraMessageBox.Show(InforNotifyHelper.DeleteConfirmText, InforNotifyHelper.DeleteErrorCaption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            return XtraMessageBox.Show(InforNotifyHelper.DeleteConfirmText, InforNotifyHelper.DeleteConfirmCaption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
         }
 
         public static DialogResult ShowDeleteConfirm(string question)
