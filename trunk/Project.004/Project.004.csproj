@@ -70,6 +70,7 @@
   <ItemGroup>
     <Compile Include="Context.cs" />
     <Compile Include="Controllers\SYS_NguoiDungCtrl.cs" />
+    <Compile Include="Controllers\SYS_VaiTroCtrl.cs" />
     <Compile Include="DbHelper.cs" />
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
@@ -91,6 +92,19 @@
     <Compile Include="Systems\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\CAT_NhanVienCtrl.cs" />
+    <Compile Include="Views\DanhMuc\frmQuanLyNguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DanhMuc\frmQuanLyNguoiDung.Designer.cs">
+      <DependentUpon>frmQuanLyNguoiDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DanhMuc\frmQuanLyNguoiDung_TaoTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DanhMuc\frmQuanLyNguoiDung_TaoTaiKhoan.Designer.cs">
+      <DependentUpon>frmQuanLyNguoiDung_TaoTaiKhoan.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -111,7 +125,14 @@
     <EmbeddedResource Include="Systems\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\DanhMuc\frmQuanLyNguoiDung.resx">
+      <DependentUpon>frmQuanLyNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DanhMuc\frmQuanLyNguoiDung_TaoTaiKhoan.resx">
+      <DependentUpon>frmQuanLyNguoiDung_TaoTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="app.config" />
+    <None Include="Properties\DataSources\Project._004.Models.SYS_NguoiDung.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -149,9 +170,7 @@
       <Name>Project.004.Models</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
