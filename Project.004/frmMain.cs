@@ -11,6 +11,7 @@ using Library.UI.Form;
 namespace Project._004
 {
     using Project._004.Controllers;
+    using Project._004.Views.DanhMuc;
 
     public partial class frmMain : XtraForm
     {
@@ -220,7 +221,8 @@ namespace Project._004
 
         private void btnQuanLyNguoiDung_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            IForm.CloseAllTabPage(tabControl);
+            IForm.OpenTabPage(tabControl, new frmQuanLyNguoiDung());
         }
 
         private void btnNhanVien_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

@@ -9,6 +9,7 @@ namespace Project._004.Controllers
     using Library;
     using Library.Data;
     using Project._004.Models;
+using System.Windows.Forms;
 
     public class SYS_NguoiDungCtrl
     {
@@ -72,6 +73,13 @@ namespace Project._004.Controllers
             user.ID_trang_thai = 1;
 
             db.SubmitChanges();
+        }
+
+        public static void LoadBindingSource(BindingSource bindingSource, Context db = null)
+        {
+            if (db == null) db = new Context();
+
+            bindingSource.DataSource = db.SYS_NguoiDungs.OrderBy(o => o.Lan_dang_nhap_cuoi).ToList();
         }
 
         //public static SYS_NguoiDung GetNguoiDung(int ID_nguoi_dung, Context db = null)
