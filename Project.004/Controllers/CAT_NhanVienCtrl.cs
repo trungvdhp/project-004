@@ -57,5 +57,12 @@ namespace Project._004.Controllers
             lookUpEdit.NullValuePromptShowForEmptyValue = true;
             lookUpEdit.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.False;
         }
+
+        public static CAT_NhanVien GetItem(int ID_nhan_vien, Context db = null)
+        {
+            if (db == null) db = new Context();
+
+            return db.CAT_NhanViens.SingleOrDefault(w => w.ID_nhan_vien == ID_nhan_vien);
+        }
     }
 }
