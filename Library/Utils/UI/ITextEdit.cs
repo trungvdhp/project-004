@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraEditors;
+using DevExpress.XtraEditors.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,5 +47,12 @@ namespace Library.UI.Form
             textEdit.Properties.NullValuePromptShowForEmptyValue = true;
         }
         #endregion
+
+        public static void SetMask(this RepositoryItemTextEdit textEdit, string editMask = null, DevExpress.XtraEditors.Mask.MaskType maskType = DevExpress.XtraEditors.Mask.MaskType.RegEx)
+        {
+            textEdit.Mask.UseMaskAsDisplayFormat = true;
+            textEdit.Mask.EditMask = editMask;
+            textEdit.Mask.MaskType = maskType;
+        }
     }
 }
