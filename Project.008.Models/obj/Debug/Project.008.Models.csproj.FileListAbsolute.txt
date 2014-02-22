@@ -1,0 +1,6 @@
+C:\Users\Tùng\Dropbox\Source Code\Others\Project.008\Project.008.Models\bin\Debug\Models.dll
+C:\Users\Tùng\Dropbox\Source Code\Others\Project.008\Project.008.Models\bin\Debug\Models.pdb
+C:\Users\Tùng\Dropbox\Source Code\Others\Project.008\Project.008.Models\obj\Debug\Models.dll
+C:\Users\Tùng\Dropbox\Source Code\Others\Project.008\Project.008.Models\obj\Debug\Models.pdb
+C:\Users\Tùng\Dropbox\Source Code\Others\Project.008\Project.008.Models\bin\Debug\Models.dll.config
+C:\Users\Tùng\Dropbox\Source Code\Others\Project.008\Project.008.Models\obj\Debug\Project.008.Models.csprojResolveAssemblyReference.cache
