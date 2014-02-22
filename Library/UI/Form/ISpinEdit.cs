@@ -10,18 +10,27 @@ namespace Library.UI.Form
 {
     public static class ISpinEdit
     {
-        public static void Config(this SpinEdit spinEdit, string mask, long maxValue = 5000, long minValue = 0, Decimal? value = null, bool readOnly = false)
+        public static void Config(this SpinEdit spinEdit, long maxValue = 5000, long minValue = 0, bool readOnly = false)
         {
-            if (value != null) spinEdit.EditValue = Decimal.Parse(value.ToString());
-            spinEdit.Properties.DisplayFormat.FormatString = mask;
-            spinEdit.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            spinEdit.Properties.EditFormat.FormatString = mask;
-            spinEdit.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            spinEdit.Properties.EditMask = mask;
             spinEdit.Properties.ReadOnly = readOnly;
 
             spinEdit.Properties.MaxValue = maxValue;
             spinEdit.Properties.MinValue = minValue;
+        }
+
+        public static void SetMask(this SpinEdit spinEdit, string editMask, DevExpress.XtraEditors.Mask.MaskType maskType = DevExpress.XtraEditors.Mask.MaskType.Numeric)
+        {
+            spinEdit.Properties.DisplayFormat.FormatString = editMask;
+            spinEdit.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            spinEdit.Properties.EditFormat.FormatString = editMask;
+            spinEdit.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            spinEdit.Properties.EditMask = editMask;
+        }
+
+        public static void SetValue(this SpinEdit spinEdit, object value = null, string stringFormat = null)
+        {
+            if (value != null)
+                spinEdit.EditValue = Decimal.Parse(value.ToString());
         }
 
         public static void Config(this RepositoryItemSpinEdit spinEdit, string mask, long maxValue = 5000, long minValue = 0, Decimal? value = null, bool readOnly = false)

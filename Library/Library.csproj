@@ -55,18 +55,18 @@
     <Compile Include="INotify.cs" />
     <Compile Include="ISecurity.cs" />
     <Compile Include="IString.cs" />
-    <Compile Include="Utils\IPopupMenu.cs" />
-    <Compile Include="Utils\UI\Base1.cs">
+    <Compile Include="UI\Form\IPopupMenu.cs" />
+    <Compile Include="UI\Base1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Utils\UI\IDateTime.cs" />
-    <Compile Include="Utils\UI\ISpinEdit.cs" />
-    <Compile Include="Utils\UI\ITextEdit.cs" />
-    <Compile Include="Utils\UI\ITreeList.cs" />
-    <Compile Include="Utils\UI\Grid\Drawing.cs" />
-    <Compile Include="Utils\UI\Grid\IGridView.cs" />
-    <Compile Include="Utils\UI\Grid\Methods.cs" />
-    <Compile Include="Utils\IForm.cs" />
+    <Compile Include="UI\Form\IDateTime.cs" />
+    <Compile Include="UI\Form\ISpinEdit.cs" />
+    <Compile Include="UI\Form\ITextEdit.cs" />
+    <Compile Include="UI\Form\ITreeList.cs" />
+    <Compile Include="UI\Grid\Drawing.cs" />
+    <Compile Include="UI\Grid\IGridView.cs" />
+    <Compile Include="UI\Grid\Methods.cs" />
+    <Compile Include="UI\IForm.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
