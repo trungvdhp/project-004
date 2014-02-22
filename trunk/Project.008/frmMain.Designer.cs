@@ -34,26 +34,17 @@
             this.appMenu = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
             this.popupControlContainer2 = new DevExpress.XtraBars.PopupControlContainer(this.components);
             this.buttonEdit = new DevExpress.XtraEditors.ButtonEdit();
-            this.iNew = new DevExpress.XtraBars.BarButtonItem();
-            this.iOpen = new DevExpress.XtraBars.BarButtonItem();
-            this.iSave = new DevExpress.XtraBars.BarButtonItem();
-            this.iSaveAs = new DevExpress.XtraBars.BarButtonItem();
             this.iExit = new DevExpress.XtraBars.BarButtonItem();
             this.popupControlContainer1 = new DevExpress.XtraBars.PopupControlContainer(this.components);
             this.someLabelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.someLabelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.ribbonImageCollection = new DevExpress.Utils.ImageCollection(this.components);
-            this.iClose = new DevExpress.XtraBars.BarButtonItem();
-            this.iFind = new DevExpress.XtraBars.BarButtonItem();
-            this.iHelp = new DevExpress.XtraBars.BarButtonItem();
             this.iAbout = new DevExpress.XtraBars.BarButtonItem();
             this.siStatus = new DevExpress.XtraBars.BarStaticItem();
             this.siInfo = new DevExpress.XtraBars.BarStaticItem();
-            this.alignButtonGroup = new DevExpress.XtraBars.BarButtonGroup();
             this.iBoldFontStyle = new DevExpress.XtraBars.BarButtonItem();
             this.iItalicFontStyle = new DevExpress.XtraBars.BarButtonItem();
             this.iUnderlinedFontStyle = new DevExpress.XtraBars.BarButtonItem();
-            this.fontStyleButtonGroup = new DevExpress.XtraBars.BarButtonGroup();
             this.iLeftTextAlign = new DevExpress.XtraBars.BarButtonItem();
             this.iCenterTextAlign = new DevExpress.XtraBars.BarButtonItem();
             this.iRightTextAlign = new DevExpress.XtraBars.BarButtonItem();
@@ -90,22 +81,13 @@
             this.ribbonControl.Images = this.ribbonImageCollection;
             this.ribbonControl.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl.ExpandCollapseItem,
-            this.iNew,
-            this.iOpen,
-            this.iClose,
-            this.iFind,
-            this.iSave,
-            this.iSaveAs,
             this.iExit,
-            this.iHelp,
             this.iAbout,
             this.siStatus,
             this.siInfo,
-            this.alignButtonGroup,
             this.iBoldFontStyle,
             this.iItalicFontStyle,
             this.iUnderlinedFontStyle,
-            this.fontStyleButtonGroup,
             this.iLeftTextAlign,
             this.iCenterTextAlign,
             this.iRightTextAlign,
@@ -119,21 +101,13 @@
             this.homeRibbonPage,
             this.helpRibbonPage});
             this.ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.ribbonControl.Size = new System.Drawing.Size(1100, 142);
+            this.ribbonControl.Size = new System.Drawing.Size(1100, 147);
             this.ribbonControl.StatusBar = this.ribbonStatusBar;
-            this.ribbonControl.Toolbar.ItemLinks.Add(this.iNew);
-            this.ribbonControl.Toolbar.ItemLinks.Add(this.iOpen);
-            this.ribbonControl.Toolbar.ItemLinks.Add(this.iSave);
-            this.ribbonControl.Toolbar.ItemLinks.Add(this.iSaveAs);
-            this.ribbonControl.Toolbar.ItemLinks.Add(this.iHelp);
+            this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Below;
             // 
             // appMenu
             // 
             this.appMenu.BottomPaneControlContainer = this.popupControlContainer2;
-            this.appMenu.ItemLinks.Add(this.iNew);
-            this.appMenu.ItemLinks.Add(this.iOpen);
-            this.appMenu.ItemLinks.Add(this.iSave);
-            this.appMenu.ItemLinks.Add(this.iSaveAs);
             this.appMenu.ItemLinks.Add(this.iExit);
             this.appMenu.Name = "appMenu";
             this.appMenu.Ribbon = this.ribbonControl;
@@ -163,47 +137,6 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.buttonEdit.Size = new System.Drawing.Size(100, 20);
             this.buttonEdit.TabIndex = 0;
-            // 
-            // iNew
-            // 
-            this.iNew.Caption = "New";
-            this.iNew.Description = "Creates a new, blank file.";
-            this.iNew.Hint = "Creates a new, blank file";
-            this.iNew.Id = 1;
-            this.iNew.ImageIndex = 0;
-            this.iNew.LargeImageIndex = 0;
-            this.iNew.Name = "iNew";
-            // 
-            // iOpen
-            // 
-            this.iOpen.Caption = "&Open";
-            this.iOpen.Description = "Opens a file.";
-            this.iOpen.Hint = "Opens a file";
-            this.iOpen.Id = 2;
-            this.iOpen.ImageIndex = 1;
-            this.iOpen.LargeImageIndex = 1;
-            this.iOpen.Name = "iOpen";
-            this.iOpen.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)((DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
-            // 
-            // iSave
-            // 
-            this.iSave.Caption = "&Save";
-            this.iSave.Description = "Saves the active document.";
-            this.iSave.Hint = "Saves the active document";
-            this.iSave.Id = 16;
-            this.iSave.ImageIndex = 4;
-            this.iSave.LargeImageIndex = 4;
-            this.iSave.Name = "iSave";
-            // 
-            // iSaveAs
-            // 
-            this.iSaveAs.Caption = "Save As";
-            this.iSaveAs.Description = "Saves the active document in a different location.";
-            this.iSaveAs.Hint = "Saves the active document in a different location";
-            this.iSaveAs.Id = 17;
-            this.iSaveAs.ImageIndex = 5;
-            this.iSaveAs.LargeImageIndex = 5;
-            this.iSaveAs.Name = "iSaveAs";
             // 
             // iExit
             // 
@@ -264,38 +197,6 @@
             this.ribbonImageCollection.Images.SetKeyName(13, "Ribbon_AlignCenter_16x16.png");
             this.ribbonImageCollection.Images.SetKeyName(14, "Ribbon_AlignRight_16x16.png");
             // 
-            // iClose
-            // 
-            this.iClose.Caption = "&Close";
-            this.iClose.Description = "Closes the active document.";
-            this.iClose.Hint = "Closes the active document";
-            this.iClose.Id = 3;
-            this.iClose.ImageIndex = 2;
-            this.iClose.LargeImageIndex = 2;
-            this.iClose.Name = "iClose";
-            this.iClose.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)((DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
-            // 
-            // iFind
-            // 
-            this.iFind.Caption = "Find";
-            this.iFind.Description = "Searches for the specified info.";
-            this.iFind.Hint = "Searches for the specified info";
-            this.iFind.Id = 15;
-            this.iFind.ImageIndex = 3;
-            this.iFind.LargeImageIndex = 3;
-            this.iFind.Name = "iFind";
-            this.iFind.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)((DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
-            // 
-            // iHelp
-            // 
-            this.iHelp.Caption = "Help";
-            this.iHelp.Description = "Start the program help system.";
-            this.iHelp.Hint = "Start the program help system";
-            this.iHelp.Id = 22;
-            this.iHelp.ImageIndex = 7;
-            this.iHelp.LargeImageIndex = 7;
-            this.iHelp.Name = "iHelp";
-            // 
             // iAbout
             // 
             this.iAbout.Caption = "About";
@@ -320,15 +221,6 @@
             this.siInfo.Name = "siInfo";
             this.siInfo.TextAlignment = System.Drawing.StringAlignment.Near;
             // 
-            // alignButtonGroup
-            // 
-            this.alignButtonGroup.Caption = "Align Commands";
-            this.alignButtonGroup.Id = 52;
-            this.alignButtonGroup.ItemLinks.Add(this.iBoldFontStyle);
-            this.alignButtonGroup.ItemLinks.Add(this.iItalicFontStyle);
-            this.alignButtonGroup.ItemLinks.Add(this.iUnderlinedFontStyle);
-            this.alignButtonGroup.Name = "alignButtonGroup";
-            // 
             // iBoldFontStyle
             // 
             this.iBoldFontStyle.Caption = "Bold";
@@ -349,15 +241,6 @@
             this.iUnderlinedFontStyle.Id = 55;
             this.iUnderlinedFontStyle.ImageIndex = 11;
             this.iUnderlinedFontStyle.Name = "iUnderlinedFontStyle";
-            // 
-            // fontStyleButtonGroup
-            // 
-            this.fontStyleButtonGroup.Caption = "Font Style";
-            this.fontStyleButtonGroup.Id = 56;
-            this.fontStyleButtonGroup.ItemLinks.Add(this.iLeftTextAlign);
-            this.fontStyleButtonGroup.ItemLinks.Add(this.iCenterTextAlign);
-            this.fontStyleButtonGroup.ItemLinks.Add(this.iRightTextAlign);
-            this.fontStyleButtonGroup.Name = "fontStyleButtonGroup";
             // 
             // iLeftTextAlign
             // 
@@ -424,25 +307,16 @@
             // 
             // fileRibbonPageGroup
             // 
-            this.fileRibbonPageGroup.ItemLinks.Add(this.iNew);
-            this.fileRibbonPageGroup.ItemLinks.Add(this.iOpen);
-            this.fileRibbonPageGroup.ItemLinks.Add(this.iClose);
-            this.fileRibbonPageGroup.ItemLinks.Add(this.iFind);
-            this.fileRibbonPageGroup.ItemLinks.Add(this.iSave);
-            this.fileRibbonPageGroup.ItemLinks.Add(this.iSaveAs);
             this.fileRibbonPageGroup.Name = "fileRibbonPageGroup";
             this.fileRibbonPageGroup.Text = "File";
             // 
             // formatRibbonPageGroup
             // 
-            this.formatRibbonPageGroup.ItemLinks.Add(this.alignButtonGroup);
-            this.formatRibbonPageGroup.ItemLinks.Add(this.fontStyleButtonGroup);
             this.formatRibbonPageGroup.Name = "formatRibbonPageGroup";
             this.formatRibbonPageGroup.Text = "Format";
             // 
             // skinsRibbonPageGroup
             // 
-            this.skinsRibbonPageGroup.ItemLinks.Add(this.rgbiSkins);
             this.skinsRibbonPageGroup.Name = "skinsRibbonPageGroup";
             this.skinsRibbonPageGroup.ShowCaptionButton = false;
             this.skinsRibbonPageGroup.Text = "Skins";
@@ -462,8 +336,8 @@
             // 
             // helpRibbonPageGroup
             // 
-            this.helpRibbonPageGroup.ItemLinks.Add(this.iHelp);
             this.helpRibbonPageGroup.ItemLinks.Add(this.iAbout);
+            this.helpRibbonPageGroup.ItemLinks.Add(this.rgbiSkins);
             this.helpRibbonPageGroup.Name = "helpRibbonPageGroup";
             this.helpRibbonPageGroup.Text = "Help";
             // 
@@ -479,10 +353,10 @@
             // gridControl
             // 
             this.gridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl.Location = new System.Drawing.Point(0, 142);
+            this.gridControl.Location = new System.Drawing.Point(0, 147);
             this.gridControl.MainView = this.gridView1;
             this.gridControl.Name = "gridControl";
-            this.gridControl.Size = new System.Drawing.Size(1100, 531);
+            this.gridControl.Size = new System.Drawing.Size(1100, 526);
             this.gridControl.TabIndex = 0;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -525,22 +399,13 @@
         #endregion
 
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl;
-        private DevExpress.XtraBars.BarButtonItem iNew;
-        private DevExpress.XtraBars.BarButtonItem iOpen;
-        private DevExpress.XtraBars.BarButtonItem iClose;
-        private DevExpress.XtraBars.BarButtonItem iFind;
-        private DevExpress.XtraBars.BarButtonItem iSave;
-        private DevExpress.XtraBars.BarButtonItem iSaveAs;
         private DevExpress.XtraBars.BarButtonItem iExit;
-        private DevExpress.XtraBars.BarButtonItem iHelp;
         private DevExpress.XtraBars.BarButtonItem iAbout;
         private DevExpress.XtraBars.BarStaticItem siStatus;
         private DevExpress.XtraBars.BarStaticItem siInfo;
-        private DevExpress.XtraBars.BarButtonGroup alignButtonGroup;
         private DevExpress.XtraBars.BarButtonItem iBoldFontStyle;
         private DevExpress.XtraBars.BarButtonItem iItalicFontStyle;
         private DevExpress.XtraBars.BarButtonItem iUnderlinedFontStyle;
-        private DevExpress.XtraBars.BarButtonGroup fontStyleButtonGroup;
         private DevExpress.XtraBars.BarButtonItem iLeftTextAlign;
         private DevExpress.XtraBars.BarButtonItem iCenterTextAlign;
         private DevExpress.XtraBars.BarButtonItem iRightTextAlign;
