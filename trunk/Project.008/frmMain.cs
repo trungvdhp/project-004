@@ -19,24 +19,8 @@ namespace Project._008
         public frmMain()
         {
             InitializeComponent();
-            InitSkinGallery();
-            InitGrid();
-
-        }
-        void InitSkinGallery()
-        {
             SkinHelper.InitSkinGallery(rgbiSkins, true);
-        }
-        BindingList<Person> gridDataList = new BindingList<Person>();
-        void InitGrid()
-        {
-            gridDataList.Add(new Person("John", "Smith"));
-            gridDataList.Add(new Person("Gabriel", "Smith"));
-            gridDataList.Add(new Person("Ashley", "Smith", "some comment"));
-            gridDataList.Add(new Person("Adrian", "Smith", "some comment"));
-            gridDataList.Add(new Person("Gabriella", "Smith", "some comment"));
-            gridControl.DataSource = gridDataList;
-        }
 
+        }
     }
 }
