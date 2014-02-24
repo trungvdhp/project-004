@@ -18,6 +18,7 @@ using Project._008.Controllers;
 namespace Project._008
 {
     using HeThong = Project._008.Views.HeThong;
+    using DanhMuc = Project._008.Views.DanhMuc;
 
     public partial class frmMain : XtraForm
     {
@@ -115,6 +116,7 @@ namespace Project._008
 
                 if (Program.CurrentUser.Tai_khoan == "sadmin")
                 {
+                    siServer.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
                     rpgDieuKhien.Visible = true;
                     //siCountDown.Caption = string.Empty;
                 }
@@ -122,11 +124,9 @@ namespace Project._008
                 {
                     //siCountDown.Caption = String.Format("Thời gian: {0:HH:mm:ss}", (new TimeSpan(0, 0, 5)).ToString());
                 }
-
                 /* --------- Thông tin --------- */
                 siUser.Caption = "Tài khoản: " + Program.CurrentUser.Tai_khoan;
 
-                siServer.Visibility = DevExpress.XtraBars.BarItemVisibility.Always;
                 siServer.Caption = String.Format("{0}/{1}", Properties.Settings.Default.DS, Properties.Settings.Default.DB);
 
                 siVersion.Caption = "Phiên bản: " + Application.ProductVersion;
@@ -215,6 +215,22 @@ namespace Project._008
             IForm.ShowDialogForm(new Project._008.Systems.frmConfig(), FormWindowState.Normal, System.Windows.Forms.FormBorderStyle.None);
 
             siServer.Caption = String.Format("{0}/{1}", Properties.Settings.Default.DS, Properties.Settings.Default.DB);
+        }
+
+        private void btnDonVi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            IForm.ShowDialogForm(new DanhMuc.frmDonVi(), FormWindowState.Normal, System.Windows.Forms.FormBorderStyle.Sizable);
+        }
+
+        private void btnDiaDiem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            IForm.ShowDialogForm(new DanhMuc.frmDiaDiem(), FormWindowState.Normal, System.Windows.Forms.FormBorderStyle.Sizable);
+        }
+
+        private void btnNguoiDung_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            tabControl.CloseAllTabPage();
+            IForm.OpenTabPage(tabControl, new DanhMuc.frmQuanLyNguoiDung());
         }
     }
 }
