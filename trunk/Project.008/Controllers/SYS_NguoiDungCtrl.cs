@@ -152,6 +152,21 @@ namespace Project._008.Controllers
             db.SubmitChanges();
         }
 
+        public static void Insert(SYS_NguoiDung nguoiDung, int? ID_vai_tro, Context db = null)
+        {
+            if (db == null) db = new Context();
+
+            var insertItem = new SYS_NguoiDungVaiTro
+            {
+                ID_nguoi_dung = nguoiDung.ID_nguoi_dung,
+                ID_vai_tro = (int)ID_vai_tro
+            };
+
+            db.SYS_NguoiDungVaiTros.InsertOnSubmit(insertItem);
+
+            db.SubmitChanges();
+        }
+
         /*
         public static void Update(SYS_VaiTro vaiTro, EXT_NguoiDung nguoiDung, Context db = null)
         {

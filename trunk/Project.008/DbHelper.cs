@@ -41,7 +41,7 @@ namespace Project._008
             {
                 Context db = new Context(GetConnectionString(datasource, "master", userId, password));
 
-                var databases = db.ExecuteQuery<string>("SELECT [name] FROM sys.databases").ToList();
+                var databases = db.ExecuteQuery<string>("SELECT [name] FROM sys.databases").ToList();// where [name] = 'QLKDONGLUC'").ToList();
 
                 return databases;
             }

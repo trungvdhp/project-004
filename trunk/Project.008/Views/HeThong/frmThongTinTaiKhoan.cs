@@ -49,9 +49,16 @@ namespace Project._008.Views.HeThong
 
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtMatKhau.Text.Trim()) || txtMatKhau.Text.Trim().Length < 6)
+            {
+                INotify.ShowWarning("Chưa nhập mật khẩu hoặc mật khẩu phải ít nhất là 6 ký tự!", "Mật khẩu");
+                txtMatKhau.SetFocus();
+                return;
+            }
+
             if (string.IsNullOrEmpty(txtMatKhauXacNhan.Text.Trim()) || txtMatKhauXacNhan.Text.Trim() != txtMatKhau.Text.Trim())
             {
-                INotify.ShowWarning("Chưa nhập mật khẩu xác nhận hoặc mật khẩu xác nhận và mật khẩu chưa giống nhau.!", "Mật khẩu");
+                INotify.ShowWarning("Chưa nhập mật khẩu xác nhận hoặc mật khẩu xác nhận và mật khẩu chưa giống nhau!", "Mật khẩu");
                 txtMatKhau.SetFocus();
                 return;
             }
