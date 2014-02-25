@@ -26,7 +26,6 @@ namespace Project._008
         {
             InitializeComponent();
             SkinHelper.InitSkinGallery(rgbiSkins, true);
-
             try
             {
                 Program.ConnectionString = DbHelper.GetConnectionString();
@@ -231,6 +230,26 @@ namespace Project._008
         {
             tabControl.CloseAllTabPage();
             IForm.OpenTabPage(tabControl, new DanhMuc.frmQuanLyNguoiDung());
+        }
+
+        private void btnNhanVien_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            tabControl.CloseAllTabPage();
+            IForm.OpenTabPage(tabControl, new DanhMuc.frmNhanVien());
+        }
+
+        private void btnKhoVatTu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (IForm.ShowDialogForm(new DanhMuc.frmKhoVatTu(), FormWindowState.Normal, System.Windows.Forms.FormBorderStyle.Sizable) == System.Windows.Forms.DialogResult.OK)
+            {
+            }
+        }
+
+        private void btnNhomVatTu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (IForm.ShowDialogForm(new DanhMuc.frmNhomVatTu(), FormWindowState.Normal, System.Windows.Forms.FormBorderStyle.Sizable) == System.Windows.Forms.DialogResult.OK)
+            {
+            }
         }
     }
 }

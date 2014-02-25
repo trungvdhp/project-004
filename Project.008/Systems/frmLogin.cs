@@ -24,9 +24,9 @@ namespace Project._008.Systems
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-            txtTenDangNhap.SetMask("[a-zA-Z0-9_\\-\\.]+"); 
+            txtTenDangNhap.SetMask("[a-zA-Z0-9_\\-\\.]+");
             txtTenDangNhap.SetNullValue("Nhập tên đăng nhập ít nhất 3 ký tự");
-            
+
             txtMatKhau.SetMask("[a-zA-Z0-9!#$%&'()*+,-.:;<=>?@[\\]{}^_`|~]+");
             txtMatKhau.SetNullValue("Nhập mật khẩu ít nhất là 6 ký tự");
 

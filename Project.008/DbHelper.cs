@@ -39,14 +39,17 @@ namespace Project._008
         {
             try
             {
-                Context db = new Context(GetConnectionString(datasource, "master", userId, password));
+                Program.ConnectionString = GetConnectionString(datasource, "master", userId, password);
+                //System.Windows.Forms.MessageBox.Show(Program.ConnectionString);
+                Context db = new Context();
 
-                var databases = db.ExecuteQuery<string>("SELECT [name] FROM sys.databases").ToList();// where [name] = 'QLKDONGLUC'").ToList();
+                var databases = db.ExecuteQuery<string>("SELECT [name] FROM sys.databases where [name] = 'QLKDONGLUC'").ToList();
 
                 return databases;
             }
-            catch
+            catch (Exception ex)
             {
+                //System.Windows.Forms.MessageBox.Show(ex.ToString());
                 return null;
             }
         }
