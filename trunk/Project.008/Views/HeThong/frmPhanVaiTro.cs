@@ -40,7 +40,7 @@ namespace Project._008.Views.HeThong
             grdVaiTro.EndUpdate();
             grvVaiTro.BestFitAllColumns();
 
-            SYS_PhongBanCtrl.LoadDataSource(repID_phong);
+            CAT_PhongBanCtrl.LoadDataSource(repID_phong);
         }
 
         private void grvVaiTro_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)

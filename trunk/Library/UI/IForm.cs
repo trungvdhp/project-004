@@ -22,7 +22,7 @@ namespace Library.UI
             frm.WindowState = state;
             frm.FormBorderStyle = style;
             frm.StartPosition = FormStartPosition.CenterScreen;
-
+            
             return frm.ShowDialog();
         }
 
