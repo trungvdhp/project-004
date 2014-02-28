@@ -251,5 +251,36 @@ namespace Project._008
             {
             }
         }
+
+        private void btnLoaiVatTu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (IForm.ShowDialogForm(new DanhMuc.frmLoaiVatTu(), FormWindowState.Normal, System.Windows.Forms.FormBorderStyle.Sizable) == System.Windows.Forms.DialogResult.OK)
+            {
+            }
+        }
+
+        private void btnNhaCungCap_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            tabControl.CloseAllTabPage();
+            IForm.OpenTabPage(tabControl, new DanhMuc.frmNhaCungCap());
+        }
+
+        private void btnKhachHang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            tabControl.CloseAllTabPage();
+            IForm.OpenTabPage(tabControl, new DanhMuc.frmKhachHang());
+        }
+
+        private void btnVatTu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            tabControl.CloseAllTabPage();
+            IForm.OpenTabPage(tabControl, new DanhMuc.frmVatTu());
+        }
+
+        private void btnQuanLyGiaVatTu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            tabControl.CloseAllTabPage();
+            IForm.OpenTabPage(tabControl, new DanhMuc.frmVatTu());
+        }
     }
 }
