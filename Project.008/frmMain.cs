@@ -19,6 +19,7 @@ namespace Project._008
 {
     using HeThong = Project._008.Views.HeThong;
     using DanhMuc = Project._008.Views.DanhMuc;
+    using TienIch = Project._008.Views.TienIch;
 
     public partial class frmMain : XtraForm
     {
@@ -280,7 +281,7 @@ namespace Project._008
         private void btnQuanLyGiaVatTu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             tabControl.CloseAllTabPage();
-            IForm.OpenTabPage(tabControl, new DanhMuc.frmVatTu());
+            IForm.OpenTabPage(tabControl, new TienIch.frmGiaVatTu());
         }
     }
 }

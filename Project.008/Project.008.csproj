@@ -389,6 +389,7 @@
     <None Include="app.config" />
     <None Include="Properties\DataSources\Project._008.Models.STO_DonViTinh.datasource" />
     <None Include="Properties\DataSources\Project._008.Models.STO_Kho.datasource" />
+    <None Include="Properties\DataSources\Project._008.Models.viewSTOVatTuCT.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

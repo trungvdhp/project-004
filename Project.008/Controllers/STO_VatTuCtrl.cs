@@ -184,5 +184,12 @@ namespace Project._008.Controllers
             }
             return 0;
         }
+
+        public static void LoadBindingSource(BindingSource bindingSource, int ID_dia_diem, int ID_loai_vat_tu, Context db = null)
+        {
+            if (db == null) db = new Context();
+
+            bindingSource.DataSource = db.viewSTOVatTuCTs.Where(w => w.ID_kho_tt == ID_dia_diem && w.ID_loai == ID_loai_vat_tu && w.Trang_thai == true).ToList();
+        }
     }
 }
