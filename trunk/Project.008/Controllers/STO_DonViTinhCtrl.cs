@@ -1,4 +1,6 @@
-﻿using Project._008.Models;
+﻿using DevExpress.XtraEditors;
+using DevExpress.XtraEditors.Repository;
+using Project._008.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +11,38 @@ namespace Project._008.Controllers
 {
     public class STO_DonViTinhCtrl
     {
+        public static void LoadDataSource(LookUpEdit lookUpEdit, Context db = null)
+        {
+            if (db == null) db = new Context();
+
+            lookUpEdit.Properties.Columns.Clear();
+            lookUpEdit.Properties.DataSource = db.STO_DonViTinhs.ToList();
+            lookUpEdit.Properties.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Ten_don_vi", 300, "Đơn vị"));
+            lookUpEdit.Properties.DisplayMember = "Ten_don_vi";
+            lookUpEdit.Properties.ValueMember = "ID_don_vi";
+            lookUpEdit.Properties.NullText = "";
+            lookUpEdit.ToolTip = lookUpEdit.Properties.NullValuePrompt = "Chọn đơn vị tính";
+            lookUpEdit.Properties.NullValuePromptShowForEmptyValue = true;
+            lookUpEdit.Properties.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.True;
+
+            lookUpEdit.ItemIndex = -1;
+        }
+
+        public static void LoadDataSource(RepositoryItemLookUpEdit lookUpEdit, Context db = null)
+        {
+            if (db == null) db = new Context();
+
+            lookUpEdit.Columns.Clear();
+            lookUpEdit.DataSource = db.STO_DonViTinhs.ToList();
+            lookUpEdit.Columns.Add(new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Ten_don_vi", 300, "Đơn vị"));
+            lookUpEdit.DisplayMember = "Ten_don_vi";
+            lookUpEdit.ValueMember = "ID_don_vi";
+            lookUpEdit.NullText = string.Empty;
+            lookUpEdit.NullValuePrompt = string.Empty;
+            lookUpEdit.NullValuePromptShowForEmptyValue = true;
+            lookUpEdit.AllowDropDownWhenReadOnly = DevExpress.Utils.DefaultBoolean.False;
+        }
+
         public static void LoadBindingSource(BindingSource bindingSource, Context db = null)
         {
             if (db == null) db = new Context();

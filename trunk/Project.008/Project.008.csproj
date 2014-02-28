@@ -31,7 +31,7 @@
     <ProductName>Phần mềm quản lý kho</ProductName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>15</ApplicationRevision>
+    <ApplicationRevision>68</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -103,23 +103,37 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Data.Linq" />
-    <Reference Include="System.Deployment" />
+    <Reference Include="System.Data.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Deployment">
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Drawing" />
     <Reference Include="System.Transactions">
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context.cs" />
+    <Compile Include="Controllers\CAT_KhachHangCtrl.cs" />
+    <Compile Include="Controllers\CAT_NhaCungCapCtrl.cs" />
     <Compile Include="Controllers\CAT_NhanVienCtrl.cs" />
+    <Compile Include="Controllers\STO_KhoCtrl.cs" />
+    <Compile Include="Controllers\STO_DonViTinhCtrl.cs" />
+    <Compile Include="Controllers\STO_KhoVatTuCtrl.cs" />
+    <Compile Include="Controllers\STO_LoaiVatTuCtrl.cs" />
+    <Compile Include="Controllers\STO_NhomVatTuCtrl.cs" />
+    <Compile Include="Controllers\STO_VatTuCtrl.cs" />
     <Compile Include="Controllers\SYS_AssemblyCtrl.cs" />
     <Compile Include="Controllers\SYS_LoaiDieuKhienCtrl.cs" />
     <Compile Include="Controllers\SYS_LoaiDieuKhienThuocTinhCtrl.cs" />
     <Compile Include="Controllers\SYS_NguoiDungCtrl.cs" />
-    <Compile Include="Controllers\SYS_PhongBanCtrl.cs" />
+    <Compile Include="Controllers\CAT_PhongBanCtrl.cs" />
     <Compile Include="Controllers\SYS_QuyenCtrl.cs" />
     <Compile Include="Controllers\SYS_ThuocTinhCtrl.cs" />
     <Compile Include="Controllers\SYS_VaiTroCtrl.cs" />
@@ -150,6 +164,96 @@
     </Compile>
     <Compile Include="UserControls\ucAction.designer.cs">
       <DependentUpon>ucAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucAction1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucAction1.designer.cs">
+      <DependentUpon>ucAction1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucLookUpEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucLookUpEdit.designer.cs">
+      <DependentUpon>ucLookUpEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DanhMuc\frmKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DanhMuc\frmKhachHang.designer.cs">
+      <DependentUpon>frmKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DanhMuc\frmDiaDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DanhMuc\frmDiaDiem.Designer.cs">
+      <DependentUpon>frmDiaDiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DanhMuc\frmDonVi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DanhMuc\frmDonVi.Designer.cs">
+      <DependentUpon>frmDonVi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DanhMuc\frmLoaiVatTu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DanhMuc\frmLoaiVatTu.designer.cs">
+      <DependentUpon>frmLoaiVatTu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DanhMuc\frmNhomVatTu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DanhMuc\frmNhomVatTu.designer.cs">
+      <DependentUpon>frmNhomVatTu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DanhMuc\frmNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DanhMuc\frmNhanVien.designer.cs">
+      <DependentUpon>frmNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DanhMuc\frmNhaCungCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DanhMuc\frmNhaCungCap.designer.cs">
+      <DependentUpon>frmNhaCungCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DanhMuc\frmQuanLyNguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DanhMuc\frmQuanLyNguoiDung.designer.cs">
+      <DependentUpon>frmQuanLyNguoiDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DanhMuc\frmQuanLyNguoiDung_TaoTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DanhMuc\frmQuanLyNguoiDung_TaoTaiKhoan.designer.cs">
+      <DependentUpon>frmQuanLyNguoiDung_TaoTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DanhMuc\frmKhoVatTu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DanhMuc\frmKhoVatTu.designer.cs">
+      <DependentUpon>frmKhoVatTu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DanhMuc\frmVatTu1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DanhMuc\frmVatTu1.designer.cs">
+      <DependentUpon>frmVatTu1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DanhMuc\frmVatTu_SinhTuDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DanhMuc\frmVatTu_SinhTuDong.Designer.cs">
+      <DependentUpon>frmVatTu_SinhTuDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DanhMuc\frmVatTu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DanhMuc\frmVatTu.Designer.cs">
+      <DependentUpon>frmVatTu.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\HeThong\frmLoaiDieuKhien.cs">
       <SubType>Form</SubType>
@@ -187,6 +291,12 @@
     <Compile Include="Views\HeThong\frmVaiTro.designer.cs">
       <DependentUpon>frmVaiTro.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\TienIch\frmGiaVatTu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\TienIch\frmGiaVatTu.Designer.cs">
+      <DependentUpon>frmGiaVatTu.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -210,6 +320,51 @@
     <EmbeddedResource Include="UserControls\ucAction.resx">
       <DependentUpon>ucAction.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucAction1.resx">
+      <DependentUpon>ucAction1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucLookUpEdit.resx">
+      <DependentUpon>ucLookUpEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DanhMuc\frmKhachHang.resx">
+      <DependentUpon>frmKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DanhMuc\frmDiaDiem.resx">
+      <DependentUpon>frmDiaDiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DanhMuc\frmDonVi.resx">
+      <DependentUpon>frmDonVi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DanhMuc\frmLoaiVatTu.resx">
+      <DependentUpon>frmLoaiVatTu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DanhMuc\frmNhomVatTu.resx">
+      <DependentUpon>frmNhomVatTu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DanhMuc\frmNhanVien.resx">
+      <DependentUpon>frmNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DanhMuc\frmNhaCungCap.resx">
+      <DependentUpon>frmNhaCungCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DanhMuc\frmQuanLyNguoiDung.resx">
+      <DependentUpon>frmQuanLyNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DanhMuc\frmQuanLyNguoiDung_TaoTaiKhoan.resx">
+      <DependentUpon>frmQuanLyNguoiDung_TaoTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DanhMuc\frmKhoVatTu.resx">
+      <DependentUpon>frmKhoVatTu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DanhMuc\frmVatTu1.resx">
+      <DependentUpon>frmVatTu1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DanhMuc\frmVatTu_SinhTuDong.resx">
+      <DependentUpon>frmVatTu_SinhTuDong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DanhMuc\frmVatTu.resx">
+      <DependentUpon>frmVatTu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\HeThong\frmLoaiDieuKhien.resx">
       <DependentUpon>frmLoaiDieuKhien.cs</DependentUpon>
     </EmbeddedResource>
@@ -228,7 +383,12 @@
     <EmbeddedResource Include="Views\HeThong\frmVaiTro.resx">
       <DependentUpon>frmVaiTro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\TienIch\frmGiaVatTu.resx">
+      <DependentUpon>frmGiaVatTu.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="app.config" />
+    <None Include="Properties\DataSources\Project._008.Models.STO_DonViTinh.datasource" />
+    <None Include="Properties\DataSources\Project._008.Models.STO_Kho.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -725,6 +885,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon.ico" />
+    <None Include="Images\16\Button.Insert.16.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Library\Library.csproj">
@@ -737,6 +898,9 @@
       <Name>Project.008.Models</Name>
       <Private>True</Private>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\QuanLyNhap\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
